@@ -1,3 +1,6 @@
+assert = require("assert");
+pow = require("./pow");
+
 describe("pow", function () {
 
     describe("возводит x в степень n", function () {
