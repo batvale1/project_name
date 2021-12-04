@@ -18,6 +18,21 @@ describe("pow", function () {
 
     });
 
+    describe("возводит x в степень 2", function () {
+
+        function makeTest (x) {
+            const expected = Math.pow(x, 2);
+            it("при возведении " + x + " в степень 2 результат: " + expected, function () {
+                assert.equal(pow(x, 2), expected);
+            });
+        }
+
+        for (let x = 1; x <= 5; x++) {
+            makeTest(x);
+        }
+
+    });
+
     it("при возведении в отрицательную степень результат NaN", function () {
         assert(isNaN(pow(2, -1)), "pow(2, -1) не NaN");
     });
